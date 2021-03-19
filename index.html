@@ -20,23 +20,23 @@
 
     <div id = 'valoresImc'>
         <table>
-            <tr>
+            <tr id="cabecalhoTabela">
                 <th>IMC</th>
                 <th>CLASSIFICAÇÃO</th>
             </tr>
-            <tr>
+            <tr id="abaixoDoPeso" onclick="clicar()">
                 <td>Abaixo de 18,5</td>
                 <td>Abaixo do peso</td>
             </tr>
-            <tr>
+            <tr id="pesoIdeal" onclick="clicar()">
                 <td>Entre 18,6 e 24,9</td>
                 <td>Peso ideal (parabéns)</td>
             </tr>
-            <tr>
+            <tr id="levementeAcimaDoPeso" onclick="clicar()">
                 <td>Entre 25,0 e 29,9</td>
                 <td>Levemente acima do peso</td>
             </tr>
-            <tr>
+            <tr id="obesidadeGrauI" onclick="clicar()">
                 <td>Entre 30,0 e 34,9</td>
                 <td>obesidade grau I</td>
             </tr>
@@ -51,16 +51,36 @@
             var pesoUsuario = document.getElementById('peso').value;
             var alturaUsuario = document.getElementById('altura').value;
             var resultado = parseFloat(pesoUsuario) / parseFloat(alturaUsuario ** 2);
-            
+           // var pesoUsuarioIdeal = (alturaUsuario * alturaUsuario) * 24
+           // console.log(pesoUsuarioIdeal);
 
             if (resultado <= 18.5){
                     document.getElementById("resultado").innerHTML = 'Seu IMC é de ' + resultado.toFixed(1) + ' abaixo do peso'  ;
+                    document.getElementById("abaixoDoPeso").style.backgroundColor = "red";
+                    document.getElementById("pesoIdeal").style.backgroundColor = "#007db8"; 
+                    document.getElementById("levementeAcimaDoPeso").style.backgroundColor = "#007db8";
+                    document.getElementById("obesidadeGrauI").style.backgroundColor = "#007db8"; 
                 }else if (resultado >= 18.51 && resultado <= 24.9){
-	             document.getElementById("resultado").innerHTML = 'Seu IMC é de ' + resultado.toFixed(1) + ' peso ideal' ;
-                }else if (resultado >= 25 && resultado <= 29.9){
+	                document.getElementById("resultado").innerHTML = 'Seu IMC é de ' + resultado.toFixed(1) + ' peso ideal' ;
+                    //document.getElementById("pesoIdeal").style.backgroundColor = "green";
+                    document.getElementById("abaixoDoPeso").style.backgroundColor = "#007db8";
+                    document.getElementById("pesoIdeal").style.backgroundColor = "green"; 
+                    document.getElementById("levementeAcimaDoPeso").style.backgroundColor = "#007db8";
+                    document.getElementById("obesidadeGrauI").style.backgroundColor = "#007db8"; 
+                }else if (resultado > 25 && resultado <= 29.9){
 	                document.getElementById("resultado").innerHTML = 'Seu IMC é de ' + resultado.toFixed(1) + ' levemente acima do peso' ;
+                    //document.getElementById("levementeAcimaDoPeso").style.backgroundColor = "red";
+                    document.getElementById("abaixoDoPeso").style.backgroundColor = "#007db8";
+                    document.getElementById("pesoIdeal").style.backgroundColor = "#007db8"; 
+                    document.getElementById("levementeAcimaDoPeso").style.backgroundColor = "red";
+                    document.getElementById("obesidadeGrauI").style.backgroundColor = "#007db8"; 
                 }else{
 	                document.getElementById("resultado").innerHTML = 'Seu IMC é de ' + resultado.toFixed(1) + ' obesidade' ;
+                    //document.getElementById("obesidadeGrauI").style.backgroundColor = "red";
+                    document.getElementById("abaixoDoPeso").style.backgroundColor = "#007db8";
+                    document.getElementById("pesoIdeal").style.backgroundColor = "#007db8"; 
+                    document.getElementById("levementeAcimaDoPeso").style.backgroundColor = "#007db8";
+                    document.getElementById("obesidadeGrauI").style.backgroundColor = "red"; 
             }
 
             
