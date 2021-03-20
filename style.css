@@ -5,8 +5,7 @@
 }
 
 #imc{
-    margin: 0 auto 0 auto;
-    
+    margin: 0 auto 0 auto;   
     text-align: center;
     padding-bottom: 20px;
 }
@@ -33,16 +32,12 @@ input{
 
 table{
     margin: 0 auto 0 auto;
-    text-align: center;
-    
-    
+    text-align: center;   
 }
 
 table, th{
     border: 1px solid #007db8;
-    border-collapse: collapse;
-    
-    
+    border-collapse: collapse;    
 }
 
 td{
@@ -50,13 +45,11 @@ td{
    /* background-color: ; */
     color: white;
     padding-right: 13px;
-    padding-left: 5px;
-    
+    padding-left: 5px;  
 }
 
 tr{
-    background-color: #007db8;
-    
+    background-color: #007db8;   
 }
 
 #cabecalhoTabela {
