@@ -1,5 +1,7 @@
-var nomeUsuario = window.prompt('Qual seu nome ?');
-document.getElementById("nome").innerHTML = 'Seja bem-vindo ' + nomeUsuario;
+    var nomeUsuario = window.prompt('Qual seu nome ?');
+    document.getElementsByTagName('div')[1].innerText = nomeUsuario;
+
+
 
 function clicar(){
     var pesoUsuario = document.getElementById('peso').value;
