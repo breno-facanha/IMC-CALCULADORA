@@ -1,5 +1,5 @@
-    var nomeUsuario = window.prompt('Qual seu nome ?');
-    document.getElementsByTagName('div')[1].innerText = nomeUsuario;
+ var nomeUsuario = window.prompt('Qual seu nome ?');
+ document.getElementsByTagName('div')[1].innerText = nomeUsuario;
 
 
 

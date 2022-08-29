@@ -9,40 +9,59 @@
     
 </head>
 <body>
-    <div id ='imc'>
-        <h1>Calculadora IMC</h1>
-        <div id ='nome'>Seu nome</div>        
-        <div>Qual seu peso ?</div>
-        <input type="text" id="peso" placeholder="Peso em Kg Ex: 80.5">
-        <div>Qual sua altura ?</div>
-        <input type="text" name="altura" id="altura" placeholder="Altura em metros Ex: 1.90"></br>
-        <button id="resultado" onclick="clicar()">Resultado</button>
+    
+
+    <div id="teste">        
+
+            <h1>Calculadora IMC</h1>
+
+        <div id="calculadora">
+            
+            <div id ='imc'>
+                
+                <div id ='nome'>Seu nome</div>        
+                <div>Qual seu peso ?</div>
+                <input type="text" id="peso" placeholder="Peso em Kg Ex: 80.5">
+                <div>Qual sua altura ?</div>
+                <input type="text" name="altura" id="altura" placeholder="Altura em metros Ex: 1.90"></br>
+                <button id="resultado" onclick="clicar()">Resultado</button>
+                
+                
+                
+            </div>
+            
+            <div id = 'valoresImc'>
+                <table>
+                    <tr id="cabecalhoTabela">
+                        <th>IMC</th>
+                        <th>CLASSIFICAÇÃO</th>
+                    </tr>
+                    <tr id="abaixoDoPeso" onclick="clicar()">
+                        <td>Abaixo de 18,5</td>
+                        <td>Abaixo do peso</td>
+                    </tr>
+                    <tr id="pesoIdeal" onclick="clicar()">
+                        <td>Entre 18,6 e 24,9</td>
+                        <td>Peso ideal (parabéns)</td>
+                    </tr>
+                    <tr id="levementeAcimaDoPeso" onclick="clicar()">
+                        <td>Entre 25,0 e 29,9</td>
+                        <td>Levemente acima do peso</td>
+                    </tr>
+                    <tr id="obesidadeGrauI" onclick="clicar()">
+                        <td>Entre 30,0 e 34,9</td>
+                        <td>obesidade grau I</td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+
     </div>
 
-    <div id = 'valoresImc'>
-        <table>
-            <tr id="cabecalhoTabela">
-                <th>IMC</th>
-                <th>CLASSIFICAÇÃO</th>
-            </tr>
-            <tr id="abaixoDoPeso" onclick="clicar()">
-                <td>Abaixo de 18,5</td>
-                <td>Abaixo do peso</td>
-            </tr>
-            <tr id="pesoIdeal" onclick="clicar()">
-                <td>Entre 18,6 e 24,9</td>
-                <td>Peso ideal (parabéns)</td>
-            </tr>
-            <tr id="levementeAcimaDoPeso" onclick="clicar()">
-                <td>Entre 25,0 e 29,9</td>
-                <td>Levemente acima do peso</td>
-            </tr>
-            <tr id="obesidadeGrauI" onclick="clicar()">
-                <td>Entre 30,0 e 34,9</td>
-                <td>obesidade grau I</td>
-            </tr>
-        </table>
-    </div>
+
+  
+
     <script src="index.js"></script>
 </body>
 
